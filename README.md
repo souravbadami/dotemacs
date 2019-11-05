@@ -1,2 +1,2 @@
 # dotemacs
-Sweet emacs setup.
+sweet emacs setup (IMO).
