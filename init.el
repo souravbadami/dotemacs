@@ -263,7 +263,8 @@
   (projectile-mode)
   (setq-default projectile-enable-caching t
                 ;; Show project (if any) name in modeline
-                projectile-mode-line '(:eval (projectile-project-name))))
+                projectile-mode-line '(:eval (projectile-project-name)))
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
 
 ;; Magit: The only git interface you'll ever need
