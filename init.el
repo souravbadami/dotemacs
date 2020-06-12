@@ -51,6 +51,8 @@
 ;; don't show the scroll bar
 (scroll-bar-mode -1)
 
+;; switch to full screen on startup
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; Make the title bar blend with the background color
 ;; Set the appearance to light/dark depending on your theme
