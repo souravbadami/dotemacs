@@ -77,7 +77,7 @@
 
 
 ;; Set font and line spacing
-(set-face-attribute 'default nil :font "Menlo 13")
+(set-face-attribute 'default nil :font "Monaco 13")
 (setq-default line-spacing 0.3)
 
 
@@ -230,17 +230,17 @@
   (add-hook 'cider-repl-mode-hook #'paredit-mode)
   (add-hook 'cider-repl-mode-hook #'company-mode)
   (add-hook 'cider-mode-hook #'company-mode)
-  (add-hook 'cider-mode-hook
-            (local-set-key (kbd "<C-return>") 'cider-eval-defun-at-point)))
+ ; (add-hook 'cider-mode-hook (local-set-key (kbd "<C-return>") 'cider-eval-defun-at-point))
+  )
 
 
 ;; Adds some niceties/refactoring support
-(use-package clj-refactor
-  :ensure t
-  :config
-  (add-hook 'clojure-mode-hook
-            (lambda ()
-              (clj-refactor-mode 1))))
+;; (use-package clj-refactor
+;;   :ensure t
+;;   :config
+;;   (add-hook 'clojure-mode-hook
+;;             (lambda ()
+;;               (clj-refactor-mode 1))))
 
 
 ;; Aggressively indents your clojure code
@@ -264,6 +264,7 @@
   (setq-default projectile-enable-caching t
                 ;; Show project (if any) name in modeline
                 projectile-mode-line '(:eval (projectile-project-name)))
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
 
