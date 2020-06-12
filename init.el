@@ -1,5 +1,3 @@
-;; A minimial setup for Clojurians
-
 (require 'package)
 
 ;; Define package repositories
